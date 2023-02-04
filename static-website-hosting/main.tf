@@ -154,7 +154,7 @@ resource "aws_iam_policy" "cloudfront_policy" {
         Sid      = "VisualEditor0",
         Effect   = "Allow",
         Action   = "cloudfront:CreateInvalidation",
-        Resource = "arn:aws:cloudfront:::distribution/"
+        Resource = "${aws_cloudfront_distribution.s3_distribution.arn}"
       }
     ]
   })
